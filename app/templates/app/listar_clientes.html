@@ -1,0 +1,55 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <title>Lista de clientes</title>
+</head>
+<body>
+
+    <h1>Lista de clientes</h1>
+    <ul>
+        {% if clientes %}
+        {% for c in clientes %}
+        <br>
+        <li>
+            Nombre:
+            {{ c.nombre}}
+        </li>
+        <li>
+            Rut:
+            {{ c.rut}}
+        </li>
+        <li> 
+            Email:
+            {{ c.email}}
+        </li>
+        <li>
+            Celular:
+            {{ c.celular}}
+        </li>
+        <li>
+            Contraseña:
+            {{ c.contraseña}}
+            <br>
+            <a href="/editar_cliente/{{ c.id }}"> Editar</a>
+            <br>
+            <a href="/borrar_cliente/{{ c.id }}"
+            onclick="return confirm('¿Esta seguro de borrar?');"
+            > Borrar</a>
+        </li>
+        {% endfor %}
+        {% else %}
+            <p>No hay clientes</p>
+        {% endif %}
+    </ul>
+
+</body>
+
+</html>

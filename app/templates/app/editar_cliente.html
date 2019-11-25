@@ -1,0 +1,25 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <title>Editar cliente</title>
+</head>
+<body>
+    <h1>Editar cliente</h1>
+    <form method="POST">
+        {{ form }}
+        {% csrf_token %}
+        <button type="submit">Editar</button>
+        <button>
+            <a href="/listar_clientes"> Volver</a>
+        </button>
+    </form>
+    
+</body>
+</html>
+

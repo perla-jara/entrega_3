@@ -1,0 +1,177 @@
+{% extends './base/base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+Menú
+{% endblock %}
+
+{% block content %}
+<section id="contenedor-inferior">
+    <aside class="aside aside-1">
+        <div class="lateral_izq">
+            <h1>Nuestras Pizzas</h1>        
+            <h3>Especialidades de la casa.</h3>
+            <div class="pepperoni">
+                <h5>PEPPERONI</h5>
+                <img src="{% static 'img/super_pepperoni-compressor.png' %}"  width="550" alt="peperoni">
+                <p>Extra queso mozzarella, doble pepperoni.</p>
+                <form >
+                    <input list="tamaño-pepperoni" name="tamaño-pepperoni">
+                    <datalist id="tamaño-pepperoni">
+                        <option value="Individual">
+                        <option value="Mediana">
+                        <option value="Grande">
+                        <option value="XL">
+                    </datalist>
+                </form>
+            </div>
+            <div class="carnes-mix">
+                <h5>CARNES MIX</h5>
+                <img src="{% static 'img/todas_las_carnes-compressor.png' %}" alt="carnes-mix">
+                <p>Queso mozzarella, pepperoni, jamón, tocino, salchicha italiana.</p>
+                <form >
+                    <input list="tamaño-carnes-mix" name="tamaño-carnes-mix">
+                    <datalist id="tamaño-carnes-mix">
+                        <option value="Individual">
+                        <option value="Mediana">
+                        <option value="Grande">
+                        <option value="XL">
+                    </datalist>
+                </form>
+            </div>
+            <div class="italiana">
+                <h5>ITALIANA</h5>
+                <img src="{% static 'img/italiana-compressor.png' %}"  alt="italiana">
+                <p>Queso mozzarella, orégano, pepperoni, salchicha italiana,
+                    aceitunas negras, champiñón.</p>
+                <form >
+                    <input list="tamaño-italiana" name="tamaño-italiana">
+                    <datalist id="tamaño-italiana">
+                        <option value="Individual">
+                        <option value="Mediana">
+                        <option value="Grande">
+                        <option value="XL">
+                    </datalist>
+                </form>    
+            </div>
+            <div class="española">
+                <h5>ESPAÑOLA</h5>
+                <img src="{% static 'img/Espanola.png' %}" height="150" alt="española">
+                <p>Queso mozzarella, chorizillo, jamon, 
+                    pimenton, tomate.</p>
+                <form >
+                    <input list="tamaño-española" name="tamaño-española">
+                    <datalist id="tamaño-española">
+                        <option value="Individual">
+                        <option value="Mediana">
+                        <option value="Grande">
+                        <option value="XL">
+                    </datalist>
+                </form>
+            </div>
+            <div class="napolitana">
+                <h5>NAPOLITANA</h5>
+                <img src="{% static 'img/napolitana-compressor.png' %}" alt="napolitana">
+                <p>Queso mozzarella, orégano, tomate.</p>
+                <form >
+                    <input list="tamaño-napolitana" name="tamaño-napolitana">
+                    <datalist id="tamaño-napolitana">
+                        <option value="Individual">
+                        <option value="Mediana">
+                        <option value="Grande">
+                        <option value="XL">
+                    </datalist>
+                </form>
+            </div>
+            <div class="vegetariana">
+                <h5>VEGETARIANA</h5>
+                <img src="{% static 'img/vegetariana-compressor.png' %}" width="550"  height="200" alt="vegetariana">
+                <p>Queso mozzarella, cebolla, pimiento verde,
+                    tomate, aceitunas negras, champiñon.</p>
+                <form >
+                    <input list="tamaño-vegetariana" name="tamaño-vegetariana">
+                    <datalist id="tamaño-vegetariana">
+                        <option value="Individual">
+                        <option value="Mediana">
+                        <option value="Grande">
+                        <option value="XL">
+                    </datalist>
+                </form>
+            </div>
+            <div class="hawaiana">
+                <h5>HAWAIANA</h5>
+                <img src="{% static 'img/hawaiana-compressor.png' %}"  width="550" height="200" alt="hawaiana">
+                <p>Queso mozzarella, piña y jamón.</p>
+                <form >
+                    <input list="tamaño-hawaiana" name="tamaño-hawaiana">
+                    <datalist id="tamaño-hawaiana">
+                        <option value="Individual">
+                        <option value="Mediana">
+                        <option value="Grande">
+                        <option value="XL">
+                    </datalist>
+                </form>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+        <br>
+        <br>
+        
+    </aside>
+    
+    <aside class="aside aside-2">
+        <div class="lateral_der">
+            <h1>Nuestros acompañamientos</h1>  
+            <h5>PALITOS DE QUESO</h5>
+            <img id="palitos-queso" src="{% static 'img/palitos_de_queso-compressor.png' %}" alt="palitos_queso">
+            <p>Nuestros palitos de pan horneados cubiertos con nuestra sabrosa salsa de queso.</p>
+            <form >
+                <input list="agregar-palitos-queso" name="agregar-palitos-queso">
+                <datalist id="agregar-palitos-queso">
+                    <option value="Agregar 1 porción">
+                    <option value="Agregar 2 porciones">
+                    <option value="Agregar 3 porciones">
+                </datalist>
+            </form>
+            <br>
+            <h5>PALITOS DE AJO</h5>
+            <img id="palitos-ajo" src="{% static 'img/palitos_de_ajo-compressor.png' %}" alt="palitos_ajo">
+            <p>Nuestros palitos de pan horneados cubiertos con nuestra sabrosa salsa de queso.</p>
+            <form >
+                <input list="agregar-palitos-ajo" name="agregar-palitos-ajo">
+                <datalist id="agregar-palitos-ajo">
+                    <option value="Agregar 1 porción">
+                    <option value="Agregar 2 porciones">
+                    <option value="Agregar 3 porciones">
+                </datalist>
+            </form>
+            <br>
+            <h5>PALITOS DE CANELA</h5>                
+            <img id="palitos-canela" src="{% static 'img/palitos_de_canela-compressor.png' %}" alt="palitos_canela">
+            <p>Nuestros palitos al horno recubierto de salsa de canela.</p>
+            <form >
+                <input list="agregar-palitos-canela" name="agregar-palitos-canela">
+                <datalist id="agregar-palitos-canela">
+                    <option value="Agregar 1 porción">
+                    <option value="Agregar 2 porciones">
+                    <option value="Agregar 3 porciones">
+                </datalist>
+            </form>            
+            <br>
+            
+        </div>
+        <br>
+    
+    </aside>
+    
+</section>
+
+{% endblock %}
+

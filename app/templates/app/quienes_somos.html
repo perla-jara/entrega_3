@@ -1,0 +1,37 @@
+{% extends './base/base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+Quiénes somos
+{% endblock %}
+
+{% block content %}
+<section id="contenedor-inferior">
+    <div class="lateral_izq">
+        <h1>NUESTRO COMPROMISO</h1>
+        <br>
+        <p> MEJORES INGREDIENTES, MEJOR PIZZA. 
+            ESO ES LO QUE NOS HACE DIFERENTES.
+            El secreto del éxito se asemeja bastante a hacer una mejor pizza... cuanto más empeño pongas, mejor será el resultado. Hoy en día, buscamos la perfección como lo venimos haciendo desde el momento en que inauguramos nuestro primer restaurante hace más de 30 años. Hoy mantenemos el deseo de ser los mejores en preparar nuevos productos y nuevas e innovadoras recetas.            
+            La calidad es esencial para nosotros. Ha sido nuestra base desde la primera pizza que preparamos en nuestro primer local en Santiago, Chile, hasta las que hacemos hoy en día en los más de 20 restaurantes en nuestro país.                
+            No usamos ingredientes baratos ni procesados. Desde nuestra salsa exclusiva, nuestros ingredientes, nuestra masa fresca original e incluso en la caja, invertimos para ofrecerte siempre la mejor pizza.
+            Sabemos que para tí, no es solo una mejor pizza. Es una reunión familiar, un cumpleaños inolvidable, una celebración de trabajo o simplemente una gran comida. Nuestro objetivo es garantizar que siempre tengas los mejores ingredientes para cada ocasión.
+        </p>
+        <br>   
+    </div>
+    <div class="lateral_der">
+        <video width="600" height="600" controls>
+            <source src="{% static 'videos/preparacion.mp4' %}" type="video/mp4">
+        </video>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+   
+</section>
+{% endblock %}

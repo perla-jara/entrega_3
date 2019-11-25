@@ -1,0 +1,118 @@
+body{
+	background: rgb(230, 230, 110);
+}
+.container{
+	display: flex;
+    flex-flow: row wrap;
+    font-weight: bold;
+    text-align: center;
+}
+.container>* {
+    padding: 10px;
+    flex: 1 100%;
+}
+.logo{
+	display: flex;
+	float: center;
+	margin: auto;
+}
+
+.header {
+    float: center;
+    display: flex;
+}
+
+.navegacion {    
+    float: left;
+    width: 30%;
+
+}
+
+#carrusel {
+	display: flex;
+	float: center;
+	margin: auto;
+    width: 900px;
+}
+.lateral_izq {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+.lateral_der {
+    width: 48%;
+    float: right;
+}
+
+#comida {
+    width: 70%;
+    height: auto;
+}
+
+.footer {
+	text-align: center;
+    font-family: sans-serif;
+	color: whitesmoke;
+	background-color: royalblue;
+    width: 100%;
+    bottom: 0;
+    position:fixed;
+}
+
+#btn
+
+.social {
+	position: fixed;
+    left: 0;
+	top: 100px; 
+	z-index: 2000; 
+}
+ 
+	.social ul {
+		list-style: none;
+	}
+ 
+	.social ul li a {
+		display: inline-block;
+		color:#fff;
+		background: #000;
+		padding: 10px 15px;
+		text-decoration: none;
+		-webkit-transition:all 500ms ease;
+		-o-transition:all 500ms ease;
+		transition:all 500ms ease; 
+	}
+	.social ul li .icon-pedir {background: green;} 
+	.social ul li .icon-facebook {background:#3b5998;} 
+	.social ul li .icon-twitter {background: #00abf0;}
+	.social ul li .icon-googleplus {background: #d95232;}
+	.social ul li .icon-instagram{ background: #ff3507;}
+	.social ul li a:hover {
+		background: #000;
+		padding: 10px 30px; 
+	}
+	
+.aside {
+	float: left;
+	width: 40%;
+	padding: 0px;
+}
+
+@media screen and (max-width: 992px) {
+	.aside {
+	    width: 50%;
+	}
+}
+	
+/* pantalla grandes */
+@media screen and (max-width: 800px) {
+	.aside {
+	    width: 100%;
+		align-content: flex-start;
+	}
+	.aside-2{
+		margin: auto;
+		display: inline-flex;
+	}
+}
