@@ -4,8 +4,19 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 # -----------  para nuestos modelos --------------------
 from .models import Cliente
-
 from .forms import ClienteForm
+# API
+from rest_framework import generics 
+from .serializers import ClienteSerializers
+
+class API_objects(generics.ListCreateAPIView):
+        queryset= Cliente.objects.all()
+        serializer_class= ClienteSerializers
+
+class API_objects_details(generics.RetrieveUpdateDestroyAPIView):
+        queryset= Cliente.objects.all()
+        serializer_class= ClienteSerializers
+
 
 def cliente_list(request):
     user = request.user
