@@ -18,6 +18,9 @@ class API_objects_details(generics.RetrieveUpdateDestroyAPIView):
         serializer_class= ClienteSerializers
 
 
+def login(request):
+    return render(request, 'app/login.html', {})
+
 def cliente_list(request):
     user = request.user
     if user.has_perm('app.administrador'):

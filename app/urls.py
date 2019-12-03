@@ -1,8 +1,12 @@
 from django.urls import path, include
+from django.conf.urls import  url
+from django.contrib import admin
+from django.contrib.auth.views import login_required
 from . import views
 from rest_framework.urlpatterns import format_suffix_patterns
 from .views import *
-from django.contrib.auth import views as auth_views
+
+
 
 urlpatterns = [
     path('api/', views.API_objects.as_view()),
@@ -19,5 +23,9 @@ urlpatterns += [
     path('menu',views.menu),
     path('',views.menu),
     path('locales',views.locales),
+    path('login',views.login),
     path('quienes_somos',views.quienes_somos),
+    url(r'^$', login,{'template_name':'login.html'}, name='login'),
+
 ]
+
