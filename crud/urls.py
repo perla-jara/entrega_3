@@ -28,5 +28,7 @@ urlpatterns = [
     path('login', include('app.urls')),
     path('locales', include('app.urls')),
     path('quienes_somos', include('app.urls')),
+    path('olvido', include('app.urls')),
+    path('restablecer', include('app.urls')),
 ]
 
